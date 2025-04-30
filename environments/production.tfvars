@@ -2,4 +2,4 @@
 # can be different for different environments. So we will keep (or keep references) in this file.
 
 resource_group_location = "Norway East" # Or West Europe
-resource_group_name_postfix = "rg"
+environment = "prod"
