@@ -9,8 +9,8 @@ variable "environment" {
   default     = "prod"
   description = "Environment name (e.g., dev, test, prod)."
   validation {
-    condition     = contains(["prod"], var.environment) # "dev", "test", 
-    error_message = "The environment must be either 'prod'."
+    condition     = contains(["dev", "prod"], var.environment) #  "test", 
+    error_message = "The environment must be either 'dev' or 'prod'."
   }
 }
 
@@ -38,5 +38,5 @@ variable "key_permissions" {
 variable "secret_permissions" {
   type        = list(string)
   description = "List of secret permissions."
-  default     = ["List", "Set", "Delete", "Get"]
+  default     = ["List", "Set", "Delete", "Get", "Recover"] 
 }

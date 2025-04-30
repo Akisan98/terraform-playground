@@ -9,6 +9,13 @@ terraform {
       version = "~>3.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "terraform-rg"
+    storage_account_name = "akisanterraformsa"
+    container_name       = "terraform-state"
+    key                  = "tfstate"
+  }
 }
 
 provider "azurerm" {

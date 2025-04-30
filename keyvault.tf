@@ -21,7 +21,7 @@ resource "azurerm_key_vault" "kv" {
 
 # Generate Password for Key Vault Secret
 resource "random_password" "password" {
-  length           = 20
+  length           = 25
   special          = true
   override_special = "%&*()-_=+[]{}<>:?"
 }
